@@ -8,24 +8,35 @@ export default function Home() {
     <main className="flex flex-col min-h-screen bg-background">
       {/* Hero Section (Primera Pantalla Principal) */}
       <section className="hero-section relative overflow-hidden py-24 md:py-32 lg:py-48 flex items-center justify-center bg-gradient-to-r from-pink-500 to-purple-500 text-white text-center">
-        <div className="container mx-auto px-4 relative z-10">
-          <h1 className="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4">
-            ¡Bienvenido a MatchPet!
-          </h1>
-          <h2 className="hero-subtitle text-2xl sm:text-3xl mb-6">
-            ¿Listo para cambiar una vida... o dos? ¡Únete hoy!
-          </h2>
-          <p className="hero-description text-lg sm:text-xl mb-8">
-            Donde cada historia comienza con un encuentro especial. Explora,
-            conecta y encuentra el compañero perfecto para ti.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button className="cta-button bg-teal-500 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full">
-              Más Información
-            </Button>
-            <Button className="cta-button bg-teal-500 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full">
-              Iniciar Sesión
-            </Button>
+        <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-center">
+          <div className="text-container mr-8">
+            <h1 className="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4">
+              ¡Bienvenido a MatchPet!
+            </h1>
+            <h2 className="hero-subtitle text-2xl sm:text-3xl mb-6">
+              ¿Listo para cambiar una vida... o dos? ¡Únete hoy!
+            </h2>
+            <p className="hero-description text-lg sm:text-xl mb-8 text-gray-300">
+              Donde cada historia comienza con un encuentro especial.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button className="cta-button bg-blue-400 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-full">
+                Más Información
+              </Button>
+              <Button className="cta-button bg-red-400 hover:bg-red-500 text-white font-bold py-3 px-8 rounded-full">
+                Iniciar Sesión
+              </Button>
+            </div>
+          </div>
+
+          <div className="image-container rounded-lg shadow-md">
+            <Image
+              src="https://picsum.photos/id/237/400/300"
+              width={400}
+              height={300}
+              alt="Mascota"
+              className="rounded-lg object-cover"
+            />
           </div>
         </div>
       </section>
