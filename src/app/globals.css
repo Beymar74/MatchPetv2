@@ -1,13 +1,40 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll; 
+    /* Add padding top to prevent content from being hidden by fixed header */
+    /* Adjust the value (e.g., pt-16, pt-20) based on your actual header height */
+    padding-top: 4.25rem; /* Example: 68px */
+  }
+
+  * {
+    @apply border-border;
+  }
 }
 
+.page-section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start; 
+  /* Removed padding-top from here, moved to body */
+}
+
+/* Optional: Style for the currently visible section */
+/* .current-section {
+  border-left: 4px solid hsl(var(--primary));
+} */
+
+/* Root Variables */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -46,6 +73,7 @@ body {
   }
 
   .dark {
+    /* Keep existing dark mode variables */
     --background: 224 71% 4%;
     --foreground: 213 31% 91%;
     --card: 224 71% 4%;
@@ -80,14 +108,3 @@ body {
     --chart-5: 340 75% 55%;
   }
 }
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-
