@@ -38,14 +38,14 @@ const stats = [
   },
 ];
 
-export default function StatsSection() {
+export default function StatsSection() {  
   return (
     <section className="min-h-screen py-16 md:py-24 bg-gradient-to-r from-[#30588C] via-[#6093BF] to-[#254559] text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-12">
           Cifras que llenan el corazón
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {stats.map((stat, index) => (
             <div
               key={index}
@@ -55,7 +55,7 @@ export default function StatsSection() {
                 <stat.icon className="w-16 h-16 text-gray-800 transition-transform transform group-hover:scale-110" strokeWidth={1.5} />
               </div>
               <div className="text-4xl md:text-5xl font-bold mb-2 text-gray-900">{stat.value}</div>
-              <div className="text-base md:text-lg font-medium text-gray-700 mb-4">{stat.label}</div>
+              <div className="text-base md:text-lg font-medium text-gray-700 mb-2">{stat.label}</div>
               <p className="text-sm text-gray-600 mb-4">{stat.description}</p>
 
               {/* Barra de progreso con porcentaje */}
@@ -73,7 +73,7 @@ export default function StatsSection() {
                 </div>
               </div>
 
-              <div className="mt-4">
+              <div className="mt-2">
                 <button className="bg-gradient-to-r from-[#BF3952] to-[#30588C] text-white border border-gray-300 hover:bg-gray-600 rounded-full py-2 px-6 transition duration-300 transform hover:scale-105">
                   Más información
                 </button>

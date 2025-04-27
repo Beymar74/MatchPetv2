@@ -32,7 +32,7 @@ export default function CommunitySection() {
         </div>
 
         {/* Filters */}
-        <div className="flex justify-center flex-wrap gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {filters.map((filter) => (
             <Button
               key={filter}
@@ -50,7 +50,7 @@ export default function CommunitySection() {
         </div>
 
         {/* Community Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {communityMembers.map((member, index) => (
             <div
               key={index}
@@ -65,11 +65,11 @@ export default function CommunitySection() {
                   <h4 className="font-semibold text-gray-800 text-sm mb-1">
                     {member.name}
                   </h4>
-                  <div className="flex items-center text-xs text-gray-500">
+                  <div className="flex items-center text-xs text-gray-500 flex-wrap">
                     <Briefcase className="w-3 h-3 mr-1" />
                     {member.experience}
                   </div>
-                </div>
+                </div>            
                 <button className="bg-[#30588C] hover:bg-[#254559] rounded-full p-2 transition duration-300 flex-shrink-0">
                   <ArrowRight className="w-4 h-4 text-white" />
                 </button>
