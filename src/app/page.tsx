@@ -2,159 +2,188 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Heart } from "lucide-react";
 
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen bg-background">
-      {/* Hero Section */}
-      <section
-        className="hero-section relative overflow-hidden py-24 md:py-32 lg:py-48 flex items-center justify-center"
-        style={{
-          background: "linear-gradient(145deg, #BF3952, #D94676)",
-          color: "white",
-        }}
-      >
-        <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-between">
-          <div className="hero-text text-center md:text-left mb-8 md:mb-0">
-            <h1 className="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4">
-              Encuentra tu huellita compatible
-            </h1>
-            <p className="hero-subtitle text-lg sm:text-xl md:text-2xl mb-6">
-              Conecta con tu compañero ideal a través de nuestra plataforma de
-              compatibilidad. Conecta con tu compañero ideal y descubre la
-              felicidad de adoptar.
-            </p>
+      {/* Hero Section (Primera Pantalla Principal) */}
+      <section className="hero-section relative overflow-hidden py-24 md:py-32 lg:py-48 flex items-center justify-center bg-gradient-to-r from-pink-500 to-purple-500 text-white text-center">
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4">
+            ¡Bienvenido a MatchPet!
+          </h1>
+          <h2 className="hero-subtitle text-2xl sm:text-3xl mb-6">
+            ¿Listo para cambiar una vida... o dos? ¡Únete hoy!
+          </h2>
+          <p className="hero-description text-lg sm:text-xl mb-8">
+            Donde cada historia comienza con un encuentro especial. Explora,
+            conecta y encuentra el compañero perfecto para ti.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button className="cta-button bg-teal-500 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full">
-              Comienza Ahora
+              Más Información
             </Button>
-          </div>
-          <div className="hero-image w-full md:w-1/2 lg:w-auto">
-            <Image
-              src="https://picsum.photos/id/237/500/400"
-              width={500}
-              height={400}
-              alt="Perro Adoptable"
-              className="rounded-lg shadow-md"
-            />
+            <Button className="cta-button bg-teal-500 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full">
+              Iniciar Sesión
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Adoption Process Section */}
-      <section className="process-section py-16">
+      {/* Sobre Nosotros (Segunda Subpantalla) */}
+      <section className="about-us-section py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-semibold text-center mb-8">
+            Sobre Nosotros
+          </h2>
+          <p className="text-gray-700 text-lg mb-4">
+            En MatchPet, creemos que cada mascota merece un hogar lleno de amor
+            y que cada persona merece encontrar a su compañero perfecto.
+          </p>
+          <p className="text-gray-700 text-lg mb-4">
+            Nacimos con la misión de conectar corazones: unir a mascotas
+            rescatadas con adoptantes responsables de forma fácil, segura y
+            llena de esperanza.
+          </p>
+          <p className="text-gray-700 text-lg">
+            Trabajamos junto a refugios y asociaciones, usando tecnología que
+            mejora las coincidencias y agiliza el proceso de adopción.
+          </p>
+        </div>
+      </section>
+
+      {/* Proceso de Adopción (Tercera Subpantalla) */}
+      <section className="adoption-process-section py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold text-center mb-12">
             Conoce el Proceso de Adopción que Manejamos
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="process-item text-center bg-pink-100 p-8 rounded-lg shadow-md">
-              <Image
-                src="https://picsum.photos/id/1025/50/50"
-                width={50}
-                height={50}
-                alt="Paso 1"
-                className="mx-auto mb-4 rounded-full"
-              />
-              <h3 className="text-xl font-semibold mb-2">Deja tu solicitud</h3>
-              <p className="text-gray-700">
-                Realiza tu solicitud de adopción completando nuestro formulario
-                online.
+          <p className="text-gray-700 text-lg text-center mb-8">
+            En MatchPet, buscamos que cada adopción sea especial, responsable y
+            segura. Por eso, seguimos un proceso sencillo pero muy cuidado:
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="process-step text-center p-6 rounded-lg shadow-md bg-white">
+              <h3 className="text-xl font-semibold mb-2">Explora y elige</h3>
+              <p className="text-gray-600">
+                Encuentra a tu compañero ideal entre las mascotas disponibles.
               </p>
             </div>
-            <div className="process-item text-center bg-pink-100 p-8 rounded-lg shadow-md">
-              <Image
-                src="https://picsum.photos/id/1074/50/50"
-                width={50}
-                height={50}
-                alt="Paso 2"
-                className="mx-auto mb-4 rounded-full"
-              />
+
+            <div className="process-step text-center p-6 rounded-lg shadow-md bg-white">
               <h3 className="text-xl font-semibold mb-2">
-                Revisión de solicitud
+                Envía tu solicitud
               </h3>
-              <p className="text-gray-700">
-                Revisamos tu solicitud para asegurar que todo esté correcto.
+              <p className="text-gray-600">
+                Una vez que encuentres a tu match, completa una breve solicitud
+                de adopción.
               </p>
             </div>
-            <div className="process-item text-center bg-pink-100 p-8 rounded-lg shadow-md">
-              <Image
-                src="https://picsum.photos/id/1005/50/50"
-                width={50}
-                height={50}
-                alt="Paso 3"
-                className="mx-auto mb-4 rounded-full"
-              />
-              <h3 className="text-xl font-semibold mb-2">Adopción exitosa</h3>
-              <p className="text-gray-700">
-                Una vez aceptada, ¡podrás llevarte a tu nueva mascota!
+
+            <div className="process-step text-center p-6 rounded-lg shadow-md bg-white">
+              <h3 className="text-xl font-semibold mb-2">
+                Evaluación y contacto
+              </h3>
+              <p className="text-gray-600">
+                El refugio revisará tu solicitud y se pondrá en contacto para
+                coordinar una entrevista.
+              </p>
+            </div>
+
+            <div className="process-step text-center p-6 rounded-lg shadow-md bg-white">
+              <h3 className="text-xl font-semibold mb-2">
+                Adopción y nuevos comienzos
+              </h3>
+              <p className="text-gray-600">
+                Si todo sale bien, ¡la adopción se concreta y llevas a casa a tu
+                nuevo miembro de la familia!
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Adoptable Pets Section */}
-      <section className="pets-section py-16 bg-gray-50">
+      {/* Nuestras Mascotas Adoptables (Cuarta Subpantalla) */}
+      <section className="pets-section py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold text-center mb-12">
             Nuestras Mascotas Adoptables
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Pet Card 1 */}
             <div className="pet-card bg-white p-6 rounded-lg shadow-md">
               <Image
                 src="https://picsum.photos/id/238/400/300"
                 width={400}
                 height={300}
-                alt="Mascota 1"
+                alt="Pelusa"
                 className="w-full h-52 object-cover rounded-lg mb-4"
               />
-              <h3 className="text-xl font-semibold mb-2">Fido</h3>
-              <p className="text-gray-600 mb-4">Joven, Pequeño</p>
+              <h3 className="text-xl font-semibold mb-2">Pelusa</h3>
+              <p className="text-gray-600 mb-4">Juguetón, Joven</p>
               <Button className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded-full">
                 Adoptar
               </Button>
             </div>
-            {/* Pet Card 2 */}
+
             <div className="pet-card bg-white p-6 rounded-lg shadow-md">
               <Image
                 src="https://picsum.photos/id/181/400/300"
                 width={400}
                 height={300}
-                alt="Mascota 2"
+                alt="Kuro"
                 className="w-full h-52 object-cover rounded-lg mb-4"
               />
-              <h3 className="text-xl font-semibold mb-2">Whiskers</h3>
-              <p className="text-gray-600 mb-4">Adulto, Mediano</p>
+              <h3 className="text-xl font-semibold mb-2">Kuro</h3>
+              <p className="text-gray-600 mb-4">Tranquilo, Macho</p>
               <Button className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded-full">
                 Adoptar
               </Button>
             </div>
-            {/* Pet Card 3 */}
-            <div className="pet-card bg-white p-6 rounded-lg shadow-md">
-              <Image
-                src="https://picsum.photos/id/593/400/300"
-                width={400}
-                height={300}
-                alt="Mascota 3"
-                className="w-full h-52 object-cover rounded-lg mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-2">Buddy</h3>
-              <p className="text-gray-600 mb-4">Adulto, Grande</p>
-              <Button className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded-full">
-                Adoptar
-              </Button>
-            </div>
+            {/* Agregar más tarjetas de mascotas */}
           </div>
         </div>
       </section>
 
-      {/* Heart-Filling Stats Section */}
+      {/* Comunidad (Quinta Subpantalla) */}
+      <section className="community-section py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-semibold text-center mb-12">
+            Conoce a Nuestra Comunidad
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="community-member bg-white p-6 rounded-lg shadow-md">
+              <Image
+                src="https://picsum.photos/id/1005/400/300"
+                width={400}
+                height={300}
+                alt="Dr. Jenny Wilson"
+                className="w-full h-52 object-cover rounded-lg mb-4"
+              />
+              <h3 className="text-xl font-semibold mb-2">Dr. Jenny Wilson</h3>
+              <p className="text-gray-600">+20 años de experiencia</p>
+            </div>
+            <div className="community-member bg-white p-6 rounded-lg shadow-md">
+              <Image
+                src="https://picsum.photos/id/1074/400/300"
+                width={400}
+                height={300}
+                alt="Dr. Jane Cooper"
+                className="w-full h-52 object-cover rounded-lg mb-4"
+              />
+              <h3 className="text-xl font-semibold mb-2">Dr. Jane Cooper</h3>
+              <p className="text-gray-600">+20 años de experiencia</p>
+            </div>
+            {/* Agregar más miembros de la comunidad */}
+          </div>
+        </div>
+      </section>
+
+      {/* Cifras que Llenan el Corazón (Sexta Subpantalla) */}
       <section className="stats-section py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold text-center mb-12">
-            Cifras que Llenan el Corazón
+            Cifras que llenan el corazón
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="stat-card bg-pink-100 text-center p-8 rounded-lg shadow-md">
@@ -170,6 +199,19 @@ export default function Home() {
               <p className="text-gray-700">Refugios registrados</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Explora y Únete a la Familia (Séptima Subpantalla) */}
+      <section className="explore-section py-16 bg-gray-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-semibold mb-8">
+            Explora, conecta y sé parte de esta gran familia que transforma
+            corazones
+          </h2>
+          <Button className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full">
+            Comenzar
+          </Button>
         </div>
       </section>
 
