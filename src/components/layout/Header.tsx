@@ -17,7 +17,7 @@ export default function Header() {
       <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image src="/Logoherader.png" alt="MatchPet Logo" width={60} height={60} />
+          <Image src="/logo1.png" alt="MatchPet Logo" width={50} height={50} />
         </Link>
 
         {/* Navigation Links (Hidden on small screens, shown on medium+) */}

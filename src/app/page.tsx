@@ -2,6 +2,7 @@
 "use client"; // Make this a Client Component
 
 import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 
 // Import all your section components
 import HeroSection from './PaginaPrincipal/HeroSection';
@@ -97,6 +98,7 @@ export default function HomePage() {
       <div id="explore" className="page-section">
         <ExploreSection />
       </div>
+        
     </div>
   );
 }
