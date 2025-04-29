@@ -49,7 +49,7 @@ export default function Footer() {
 
         {/* Call to Action */}
         <div className="mt-8 text-center">
-          <Link href="/join" className="bg-purple-600 text-white py-2 px-6 rounded-full hover:bg-purple-700 transition duration-300">
+          <Link href="/RegistroRef" className="bg-purple-600 text-white py-2 px-6 rounded-full hover:bg-purple-700 transition duration-300">
             Únete a nuestra comunidad
           </Link>
         </div>
