@@ -72,12 +72,6 @@ export default function StatsSection() {
                   </span>
                 </div>
               </div>
-
-              <div className="mt-2">
-                <button className="bg-gradient-to-r from-[#BF3952] to-[#30588C] text-white border border-gray-300 hover:bg-gray-600 rounded-full py-2 px-6 transition duration-300 transform hover:scale-105">
-                  Más información
-                </button>
-              </div>
             </div>
           ))}
         </div>
