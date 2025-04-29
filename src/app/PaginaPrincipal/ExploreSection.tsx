@@ -13,11 +13,11 @@ export default function ExploreSection() {
           Explore y Únete a la Familia
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
-          Descubre más sobre cómo puedes ayudar y formar parte de nuestra comunidad.
+          Descubre más sobre cómo puedes ayudar y formar parte de nuestra comunidad.          
         </p>
 
         {/* Grid of Options */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
           {/* Option 1: Adoptar */}
           <div className="explore-card bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col items-center transition transform hover:scale-105 hover:shadow-xl">
             <div className="flex items-center justify-center w-16 h-16 rounded-full bg-pink-100 mb-5">
@@ -25,7 +25,7 @@ export default function ExploreSection() {
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-800">Adopta un Amigo</h3>
             <p className="text-gray-600 mb-5 text-sm">Encuentra a tu compañero perfecto y dale un hogar lleno de amor.</p>
-            <Link href="/#pets" passHref>
+            <Link href="/#pets" passHref className="w-full">
               <Button className="bg-pink-500 hover:bg-pink-600 text-white w-full">Ver Mascotas</Button>
             </Link>
           </div>
@@ -37,7 +37,7 @@ export default function ExploreSection() {
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-800">Sé Voluntario</h3>
             <p className="text-gray-600 mb-5 text-sm">Únete a nuestro equipo y ayuda a cuidar a nuestras mascotas y organizar eventos.</p>
-            <Link href="/#contact" passHref>
+            <Link href="/#contact" passHref className="w-full">
               <Button variant="outline" className="w-full border-blue-500 text-blue-600 hover:bg-blue-50">Más Información</Button>
             </Link>
           </div>
@@ -49,7 +49,7 @@ export default function ExploreSection() {
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-800">Haz una Donación</h3>
             <p className="text-gray-600 mb-5 text-sm">Tu apoyo financiero nos ayuda a proporcionar alimento, refugio y atención médica.</p>
-            <Link href="/#donate" passHref>
+            <Link href="/#donate" passHref className="w-full">
               <Button variant="outline" className="w-full border-green-500 text-green-600 hover:bg-green-50">Donar Ahora</Button>
             </Link>
           </div>

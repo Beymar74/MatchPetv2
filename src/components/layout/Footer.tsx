@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Logo and Copyright */}
           <div className="mb-6 md:mb-0">
             <Link href="/" className="flex items-center justify-center md:justify-start mb-2">
-              <Image src="/Logo.png" alt="MatchPet Logo" width={150} height={150} /> {/* Slightly larger logo */}
+              <Image src="/logo3.png" alt="MatchPet Logo" width={150} height={150} /> {/* Slightly larger logo */}
               {/* <span className="ml-2 text-lg font-semibold text-white">MatchPet</span> */}
             </Link>
             <p className="text-sm">&copy; {currentYear} MatchPet. Todos los derechos reservados.</p>
