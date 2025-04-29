@@ -37,7 +37,7 @@ export default function Header() {
               Iniciar sesión
             </Button>
           </Link>
-          <Link href="/register" passHref>
+          <Link href="/RegistroUsu">
             <Button className="bg-pink-500 text-white hover:bg-pink-600">
               Registrarse
             </Button>
