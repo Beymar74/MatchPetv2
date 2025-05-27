@@ -6,10 +6,9 @@ import { Button } from '@/components/ui/button';
 export default function Header() {
   const navItems = [
     { name: 'Principal', href: '/' },
-    { name: 'Sobre nosotros', href: '/#about' },
-    { name: 'Proceso de Adopción', href: '/#process' },
-    { name: 'Mascotas', href: '/#pets' },
-    { name: 'Refugios', href: '/#shelters' },
+    { name: 'Sobre nosotros', href: '/PaginaPrincipal/AboutUs' },
+    { name: 'Proceso de Adopción', href: '/PaginaPrincipal/AdoptionProcess' },
+    { name: 'Mascotas', href: '/buscar' },
   ];
 
   return (

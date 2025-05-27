@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff, XCircle } from 'lucide-react'; // Iconos
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'; // Componente de Alerta (asegúrate que la ruta sea correcta)
-import { auth } from './firebase-config'; // Asegúrate de que el archivo de configuración esté correctamente importado
-import { createUserWithEmailAndPassword } from 'firebase/auth'; // Importa la función de Firebase Auth
+// import { auth } from './firebase-config'; // Asegúrate de que el archivo de configuración esté correctamente importado
+// import { createUserWithEmailAndPassword } from 'firebase/auth'; // Importa la función de Firebase Auth
 
 export default function FormularioUsuarioSection() {
   // Estado combinado con todos los campos del segundo formulario
@@ -75,34 +75,34 @@ export default function FormularioUsuarioSection() {
      }
 
 
-    try {
-      // Crear usuario con email y contraseña usando Firebase Auth (lógica del primer código, adaptada a campo 'email')
-      const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
+    // try {
+    //   // Crear usuario con email y contraseña usando Firebase Auth (lógica del primer código, adaptada a campo 'email')
+    //   const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
 
-      if (userCredential.user) {
-        alert('Usuario registrado exitosamente');
-        // Aquí podrías añadir lógica para guardar los datos adicionales (nombreCompleto, usuario, fechaNacimiento, intereses, etc.)
-        // en Firestore u otra base de datos, asociándolos con el user.uid de userCredential.user.
-        console.log('Usuario creado:', userCredential.user);
-        // Podrías redirigir al usuario o limpiar el formulario
-        // setFormData({ ...initialState }); // Necesitarías definir initialState
-      }
+    //   if (userCredential.user) {
+    //     alert('Usuario registrado exitosamente');
+    //     // Aquí podrías añadir lógica para guardar los datos adicionales (nombreCompleto, usuario, fechaNacimiento, intereses, etc.)
+    //     // en Firestore u otra base de datos, asociándolos con el user.uid de userCredential.user.
+    //     console.log('Usuario creado:', userCredential.user);
+    //     // Podrías redirigir al usuario o limpiar el formulario
+    //     // setFormData({ ...initialState }); // Necesitarías definir initialState
+    //   }
 
-    } catch (error: any) {
-        // Manejo de errores de Firebase (del primer código)
-        console.error("Error de Firebase:", error.code, error.message); // Log detallado para depuración
-        if (error.code === 'auth/email-already-in-use') {
-            setError('El correo electrónico ya está registrado.');
-        } else if (error.code === 'auth/invalid-email') {
-            setError('Formato de correo inválido.');
-        } else if (error.code === 'auth/weak-password') {
-            setError('La contraseña es demasiado débil. Debe tener al menos 6 caracteres.');
-        }
-        else {
-            setError('Error al registrar usuario. Inténtalo de nuevo.'); // Mensaje genérico para el usuario
-             // setError('Error al registrar usuario: ' + error.message); // Opción más detallada pero puede exponer info interna
-        }
-    }
+    // } catch (error: any) {
+    //     // Manejo de errores de Firebase (del primer código)
+    //     console.error("Error de Firebase:", error.code, error.message); // Log detallado para depuración
+    //     if (error.code === 'auth/email-already-in-use') {
+    //         setError('El correo electrónico ya está registrado.');
+    //     } else if (error.code === 'auth/invalid-email') {
+    //         setError('Formato de correo inválido.');
+    //     } else if (error.code === 'auth/weak-password') {
+    //         setError('La contraseña es demasiado débil. Debe tener al menos 6 caracteres.');
+    //     }
+    //     else {
+    //         setError('Error al registrar usuario. Inténtalo de nuevo.'); // Mensaje genérico para el usuario
+    //          // setError('Error al registrar usuario: ' + error.message); // Opción más detallada pero puede exponer info interna
+    //     }
+    // }
   };
 
   // Función para cerrar la alerta de error (del primer código)

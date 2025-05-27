@@ -24,9 +24,9 @@ export default function Footer() {
             <h4 className="font-semibold text-white mb-2">Enlaces Rápidos</h4>
             <ul className="space-y-1 text-sm">
               <li><Link href="/" className="hover:text-white transition">Principal</Link></li>
-              <li><Link href="/#about" className="hover:text-white transition">Sobre Nosotros</Link></li>
-              <li><Link href="/#pets" className="hover:text-white transition">Mascotas</Link></li>
-              <li><Link href="/#contact" className="hover:text-white transition">Contáctanos</Link></li>
+              <li><Link href="/PaginaPrincipal/AboutUs" className="hover:text-white transition">Sobre Nosotros</Link></li>
+              <li><Link href="/buscar" className="hover:text-white transition">Mascotas</Link></li>
+              <li><Link href="/contacto" className="hover:text-white transition">Contáctanos</Link></li>
             </ul>
           </div>
 
@@ -49,7 +49,7 @@ export default function Footer() {
 
         {/* Call to Action */}
         <div className="mt-8 text-center">
-          <Link href="/RegistroRef" className="bg-purple-600 text-white py-2 px-6 rounded-full hover:bg-purple-700 transition duration-300">
+          <Link href="/RegistroRef" className="bg-purple-600 text-white py-2 px-6 rounded-full hover:bg-purple-700 transition duration-300" >
             Únete a nuestra comunidad
           </Link>
         </div>

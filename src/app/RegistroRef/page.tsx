@@ -1,26 +1,30 @@
-import React, { useEffect } from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import Header from '@/components/layout/Header';
 import FormularioRegistroSection from './FormularioRegistroSection';
 import { useRouter } from 'next/navigation';
 
 export default function RegistroPage() {
   const router = useRouter();
-  
-  // Simulate successful registration (replace with your actual registration logic)
-  const registrationSuccessful = true; 
+  const [registrationSuccessful, setRegistrationSuccessful] = useState(false);
 
   useEffect(() => {
     if (registrationSuccessful) {
-      router.push("/");
+      // Redirigir al inicio tras registro exitoso
+      router.push('/');
     }
   }, [registrationSuccessful, router]);
 
   return (
-    <div >
-      {/* Header arriba */}
+    <div>
+      {/* Encabezado */}
       <Header />
-      {/* Formulario de registro */}
-      {!registrationSuccessful && <FormularioRegistroSection />}
+      
+      {/* Formulario visible solo si no se ha registrado */}
+      {!registrationSuccessful && (
+        <FormularioRegistroSection onRegisterSuccess={() => setRegistrationSuccessful(true)} />
+      )}
     </div>
   );
 }

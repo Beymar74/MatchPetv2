@@ -6,8 +6,8 @@ import { Input } from '@/components/ui/input';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Label } from '@/components/ui/label';
 import Link from 'next/link';
-import { signInWithEmailAndPassword } from 'firebase/auth'; // Importa las funciones necesarias para el login
-import { auth } from '../../../firebase-config'; // Asegúrate de importar la configuración de Firebase
+// import { signInWithEmailAndPassword } from 'firebase/auth'; // Importa las funciones necesarias para el login
+// import { auth } from '../../../firebase-config'; // Asegúrate de importar la configuración de Firebase
 import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
@@ -44,26 +44,28 @@ export default function LoginPage() {
 
     if (!email || !password || !validateEmail(email)) return;
 
-    try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      if (userCredential?.user) {
-        console.log('Usuario logueado:', userCredential.user);
-        router.push("/");
-      }
+    // Commenting out Firebase login logic for design purposes
+    // try {
+    //   const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    //   if (userCredential?.user) {
+    //     console.log('Usuario logueado:', userCredential.user);
+    //     router.push("/");
+    //   }
 
-    } catch (error) {
-      setShowLoginError(true);
-      if (typeof error === 'object' && error !== null && 'code' in error) {
-        if (error.code === 'auth/wrong-password' || error.code === 'auth/user-not-found') {
-          setLoginError('Credenciales no válidas');
-        } else {
-          setLoginError('Error al iniciar sesión');
-        }
-      } else {
-        setLoginError('Error al iniciar sesión')
-        setShowLoginError(true)
-      }
-    }
+    // } catch (error) {
+    //   setShowLoginError(true);
+    //   if (typeof error === 'object' && error !== null && 'code' in error) {
+    //     if (error.code === 'auth/wrong-password' || error.code === 'auth/user-not-found') {
+    //       setLoginError('Credenciales no válidas');
+    //     } else {
+    //       setLoginError('Error al iniciar sesión');
+    //     }
+    //   } else {
+    //     setLoginError('Error al iniciar sesión')
+    //     setShowLoginError(true)
+    //   }
+    // }
+    console.log('Formulario de login enviado (Firebase deshabilitado)');
 
   };
 
