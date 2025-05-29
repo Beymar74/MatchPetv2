@@ -22,19 +22,27 @@ export default function FiltrosAvanzadosPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-[#011526] via-[#254559] to-[#30588C] text-white">
       <Header />
 
-      <main className="max-w-3xl mx-auto py-8 px-4">
-        <h1 className="text-2xl font-bold mb-4">🔍 Filtros Avanzados</h1>
-        <p className="mb-6 text-sm text-gray-600">
+      <main className="max-w-3xl mx-auto py-12 px-6">
+        <h1 className="text-4xl font-bold mb-4 text-[#BF3952]">🔍 Filtros Avanzados</h1>
+        <p className="mb-6 text-sm text-white/80">
           Usa los siguientes filtros para buscar mascotas según tus preferencias:
         </p>
 
-        <form className="bg-white rounded shadow p-6 space-y-4" onSubmit={e => e.preventDefault()}>
+        <form
+          className="bg-white text-gray-900 rounded-xl shadow-lg p-6 space-y-5"
+          onSubmit={e => e.preventDefault()}
+        >
           <div>
-            <label className="block font-semibold mb-1">Edad</label>
-            <select name="edad" className="w-full border rounded p-2" value={filtros.edad} onChange={handleChange}>
+            <label className="block font-semibold text-[#30588C] mb-1">Edad</label>
+            <select
+              name="edad"
+              className="w-full border border-gray-300 rounded px-3 py-2"
+              value={filtros.edad}
+              onChange={handleChange}
+            >
               <option value="">-- Seleccionar --</option>
               <option value="cachorro">Cachorro</option>
               <option value="adulto">Adulto</option>
@@ -43,8 +51,13 @@ export default function FiltrosAvanzadosPage() {
           </div>
 
           <div>
-            <label className="block font-semibold mb-1">Especie</label>
-            <select name="especie" className="w-full border rounded p-2" value={filtros.especie} onChange={handleChange}>
+            <label className="block font-semibold text-[#30588C] mb-1">Especie</label>
+            <select
+              name="especie"
+              className="w-full border border-gray-300 rounded px-3 py-2"
+              value={filtros.especie}
+              onChange={handleChange}
+            >
               <option value="">-- Seleccionar --</option>
               <option value="perro">Perro</option>
               <option value="gato">Gato</option>
@@ -53,8 +66,13 @@ export default function FiltrosAvanzadosPage() {
           </div>
 
           <div>
-            <label className="block font-semibold mb-1">Tamaño</label>
-            <select name="tamaño" className="w-full border rounded p-2" value={filtros.tamaño} onChange={handleChange}>
+            <label className="block font-semibold text-[#30588C] mb-1">Tamaño</label>
+            <select
+              name="tamaño"
+              className="w-full border border-gray-300 rounded px-3 py-2"
+              value={filtros.tamaño}
+              onChange={handleChange}
+            >
               <option value="">-- Seleccionar --</option>
               <option value="pequeño">Pequeño</option>
               <option value="mediano">Mediano</option>
@@ -63,8 +81,13 @@ export default function FiltrosAvanzadosPage() {
           </div>
 
           <div>
-            <label className="block font-semibold mb-1">Estado</label>
-            <select name="estado" className="w-full border rounded p-2" value={filtros.estado} onChange={handleChange}>
+            <label className="block font-semibold text-[#30588C] mb-1">Estado</label>
+            <select
+              name="estado"
+              className="w-full border border-gray-300 rounded px-3 py-2"
+              value={filtros.estado}
+              onChange={handleChange}
+            >
               <option value="">-- Seleccionar --</option>
               <option value="Disponible">Disponible</option>
               <option value="Adoptado">Adoptado</option>
@@ -76,14 +99,17 @@ export default function FiltrosAvanzadosPage() {
           <button
             type="button"
             onClick={aplicarFiltros}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+            className="bg-[#BF3952] hover:bg-[#a73745] text-white px-5 py-2 rounded transition"
           >
             Aplicar Filtros
           </button>
         </form>
 
-        <div className="mt-6">
-          <Link href="/Modulo_6-Gestion_de_Mascotas" className="text-blue-600 hover:underline">
+        <div className="mt-6 text-sm">
+          <Link
+            href="/Modulo_6-Gestion_de_Mascotas"
+            className="text-[#6093BF] hover:underline"
+          >
             ← Volver a Gestión de Mascotas
           </Link>
         </div>
