@@ -29,10 +29,18 @@ const HeaderAdoptante = () => {
                 Verificación de Documentos
               </Link>
             </li>
+            {/* NUEVO: Enlace al Módulo 7 */}
+            <li>
+              <Link href="/Modulo7" className="text-purple-700 hover:text-purple-900 font-semibold">
+                Reportes 📊
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
-      <Link href="/" className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Cerrar Sesión</Link>
+      <Link href="/" className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        Cerrar Sesión
+      </Link>
     </div>
   );
 };

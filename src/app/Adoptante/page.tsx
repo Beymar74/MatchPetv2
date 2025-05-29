@@ -44,7 +44,6 @@ const AdoptantePage: React.FC = () => {
           </button>
         </div>
       </div>
-      {/* Footer */}
       <FooterAdoptante />
     </div>
   );
