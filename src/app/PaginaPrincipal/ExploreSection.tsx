@@ -1,6 +1,5 @@
 // src/app/PaginaPrincipal/ExploreSection.tsx
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { Heart, Users, Gift } from 'lucide-react'; // Example icons
 import Link from 'next/link';
 
@@ -25,9 +24,7 @@ export default function ExploreSection() {
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-800">Adopta un Amigo</h3>
             <p className="text-gray-600 mb-5 text-sm">Encuentra a tu compañero perfecto y dale un hogar lleno de amor.</p>
-            <Link href="/#pets" passHref className="w-full">
-              <Button className="bg-pink-500 hover:bg-pink-600 text-white w-full">Ver Mascotas</Button>
-            </Link>
+            <Link href="/#pets" passHref className="w-full"></Link>
           </div>
 
           {/* Option 2: Voluntariado */}
@@ -37,9 +34,7 @@ export default function ExploreSection() {
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-800">Sé Voluntario</h3>
             <p className="text-gray-600 mb-5 text-sm">Únete a nuestro equipo y ayuda a cuidar a nuestras mascotas y organizar eventos.</p>
-            <Link href="/#contact" passHref className="w-full">
-              <Button variant="outline" className="w-full border-blue-500 text-blue-600 hover:bg-blue-50">Más Información</Button>
-            </Link>
+            <Link href="/#contact" passHref className="w-full"></Link>
           </div>
 
           {/* Option 3: Donar */}
@@ -49,9 +44,7 @@ export default function ExploreSection() {
             </div>
             <h3 className="text-xl font-semibold mb-3 text-gray-800">Haz una Donación</h3>
             <p className="text-gray-600 mb-5 text-sm">Tu apoyo financiero nos ayuda a proporcionar alimento, refugio y atención médica.</p>
-            <Link href="/#donate" passHref className="w-full">
-              <Button variant="outline" className="w-full border-green-500 text-green-600 hover:bg-green-50">Donar Ahora</Button>
-            </Link>
+            <Link href="/#donate" passHref className="w-full"></Link>
           </div>
 
         </div>
