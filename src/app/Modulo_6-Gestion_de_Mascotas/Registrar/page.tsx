@@ -7,7 +7,6 @@ import { useRouter } from 'next/navigation';
 export default function RegistrarMascotaPage() {
   const router = useRouter();
 
-  // Estado del formulario
   const [formData, setFormData] = useState({
     nombre: '',
     especie: '',
@@ -27,86 +26,83 @@ export default function RegistrarMascotaPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Validación simple
     if (!formData.nombre || !formData.especie || !formData.edad || !formData.estado) {
-      alert('Por favor, completa los campos obligatorios.');
+      alert('⚠️ Por favor, completa los campos obligatorios.');
       return;
     }
 
-    // Simular envío a una "base de datos"
     console.log('Mascota registrada (simulada):', formData);
-
     alert('✅ Mascota registrada correctamente (simulado)');
-    router.push('/Modulo_6-Gestion_de_Mascotas'); // Redirigir a la pantalla principal
+    router.push('/Modulo_6-Gestion_de_Mascotas');
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-[#011526] via-[#254559] to-[#30588C] text-white">
       <Header />
 
-      <main className="max-w-3xl mx-auto py-10 px-6">
-        <h1 className="text-2xl font-bold mb-6">➕ Registrar Nueva Mascota</h1>
+      <main className="max-w-3xl mx-auto py-12 px-6">
+        <h1 className="text-4xl font-bold mb-6 text-[#BF3952]">➕ Registrar Nueva Mascota</h1>
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white p-6 rounded-lg shadow-md space-y-4"
+          className="bg-white text-gray-900 p-6 rounded-xl shadow-xl space-y-5"
         >
           <div>
-            <label className="block font-medium text-sm">Nombre *</label>
+            <label className="block font-semibold text-[#30588C] text-sm">Nombre *</label>
             <input
               type="text"
               name="nombre"
               value={formData.nombre}
               onChange={handleChange}
-              className="w-full border rounded px-3 py-2 mt-1"
+              className="w-full border border-gray-300 rounded px-3 py-2 mt-1"
               required
             />
           </div>
 
           <div>
-            <label className="block font-medium text-sm">Especie *</label>
+            <label className="block font-semibold text-[#30588C] text-sm">Especie *</label>
             <input
               type="text"
               name="especie"
               value={formData.especie}
               onChange={handleChange}
-              className="w-full border rounded px-3 py-2 mt-1"
               placeholder="Perro, Gato, etc."
+              className="w-full border border-gray-300 rounded px-3 py-2 mt-1"
               required
             />
           </div>
 
           <div>
-            <label className="block font-medium text-sm">Raza</label>
+            <label className="block font-semibold text-[#30588C] text-sm">Raza</label>
             <input
               type="text"
               name="raza"
               value={formData.raza}
               onChange={handleChange}
-              className="w-full border rounded px-3 py-2 mt-1"
+              className="w-full border border-gray-300 rounded px-3 py-2 mt-1"
             />
           </div>
 
           <div>
-            <label className="block font-medium text-sm">Edad (años) *</label>
+            <label className="block font-semibold text-[#30588C] text-sm">Edad (años) *</label>
             <input
               type="number"
               name="edad"
               value={formData.edad}
               onChange={handleChange}
-              className="w-full border rounded px-3 py-2 mt-1"
-              required
               min={0}
+              className="w-full border border-gray-300 rounded px-3 py-2 mt-1"
+              required
             />
           </div>
 
           <div>
-            <label className="block font-medium text-sm">Estado *</label>
+            <label className="block font-semibold text-[#30588C] text-sm">Estado *</label>
             <select
               name="estado"
               value={formData.estado}
               onChange={handleChange}
-              className="w-full border rounded px-3 py-2 mt-1"
+              className="w-full border border-gray-300 rounded px-3 py-2 mt-1"
               required
             >
               <option value="">Selecciona un estado</option>
@@ -118,32 +114,32 @@ export default function RegistrarMascotaPage() {
           </div>
 
           <div>
-            <label className="block font-medium text-sm">Descripción</label>
+            <label className="block font-semibold text-[#30588C] text-sm">Descripción</label>
             <textarea
               name="descripcion"
               value={formData.descripcion}
               onChange={handleChange}
-              className="w-full border rounded px-3 py-2 mt-1"
+              className="w-full border border-gray-300 rounded px-3 py-2 mt-1"
               rows={3}
             ></textarea>
           </div>
 
           <div>
-            <label className="block font-medium text-sm">Foto (URL)</label>
+            <label className="block font-semibold text-[#30588C] text-sm">Foto (URL)</label>
             <input
               type="text"
               name="foto"
               value={formData.foto}
               onChange={handleChange}
-              className="w-full border rounded px-3 py-2 mt-1"
               placeholder="https://..."
+              className="w-full border border-gray-300 rounded px-3 py-2 mt-1"
             />
           </div>
 
           <div className="flex justify-end pt-4">
             <button
               type="submit"
-              className="bg-indigo-600 text-white px-5 py-2 rounded hover:bg-indigo-700"
+              className="bg-[#BF3952] hover:bg-[#a73745] text-white px-6 py-2 rounded transition"
             >
               Registrar
             </button>
