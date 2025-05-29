@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '@/components/layout/Header'
 
 function Multimedia() {
   return (
-    <div>Multimedia</div>
+    <div>
+        <Header/>
+    </div>
   )
 }
 
