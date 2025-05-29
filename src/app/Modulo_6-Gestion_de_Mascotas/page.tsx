@@ -62,7 +62,7 @@ export default function GestionMascotas() {
 
         {/* Menú de funcionalidades */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-          <Link href="/Modulo_6-Gestion_de_Mascotas/registrar">
+          <Link href="/Modulo_6-Gestion_de_Mascotas/Registrar">
             <div className="bg-indigo-600 text-white p-4 rounded shadow hover:shadow-lg transition cursor-pointer font-semibold text-center">
               ➕ Registrar Nueva Mascota
             </div>
